@@ -1,0 +1,12 @@
+.switch {
+  margin: 25px;
+  padding: 0;
+  position: relative;
+  background-color: rgb(255, 168, 153);
+  border-radius: 25px;
+  width: 120px;
+  height: 50px;
+  border: 2px;
+  cursor: pointer;
+  outline: none;
+}

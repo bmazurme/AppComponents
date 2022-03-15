@@ -1,13 +1,6 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./vendor/normalize.css);
+@import url(./components/blocks/switch/switch.css);
+@import url(./components/blocks/switch/_on/switch_on.css);
+@import url(./components/blocks/switch/__ball/switch__ball.css);
+@import url(./components/blocks/switch/__ball/_on/switch__ball_on.css);
+@import url(./components/blocks/rating/rating.css);
