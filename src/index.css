@@ -1,4 +1,5 @@
 @import url(./vendor/normalize.css);
+@import url(./components/blocks/title/title.css);
 @import url(./components/blocks/switch/switch.css);
 @import url(./components/blocks/switch/_on/switch_on.css);
 @import url(./components/blocks/switch/__ball/switch__ball.css);
