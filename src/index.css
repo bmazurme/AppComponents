@@ -5,3 +5,4 @@
 @import url(./components/blocks/switch/__ball/switch__ball.css);
 @import url(./components/blocks/switch/__ball/_on/switch__ball_on.css);
 @import url(./components/blocks/rating/rating.css);
+@import url(./components/blocks/rating/__star/rating__star.css);
