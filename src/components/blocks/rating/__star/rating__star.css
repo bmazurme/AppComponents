@@ -3,6 +3,7 @@
   width: 20px;
   border-radius: 10px;
   background-color: blanchedalmond;
+  /* border: 1px solid rgb(247, 159, 28); */
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 0px;
@@ -10,14 +11,15 @@
   cursor: pointer;
 }
 
-.rating__star:hover {
+/* .rating__star:hover {
   height: 20px;
   width: 20px;
   border-radius: 10px;
   background-color: rgb(252, 217, 166);
+  border: 1px solid rgb(247, 159, 28);
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 0px;
   margin-right: 10px;
   cursor: pointer;
-}
+} */

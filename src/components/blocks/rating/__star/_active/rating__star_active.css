@@ -1,0 +1,5 @@
+.rating__star_active {
+  /* background-color: rgb(247, 159, 28); */
+  border-radius: 50%;
+  background: radial-gradient( circle at 30% 30%, #ffff00, #774400 );
+}

@@ -1,3 +1,5 @@
 .switch_on {
-  background-color: rgb(44 202 70);
+  background-color: #ffff00;
+  /* background-color: rgb(44 202 70); */
+  border: solid 2px rgb(223, 173, 9);
 }

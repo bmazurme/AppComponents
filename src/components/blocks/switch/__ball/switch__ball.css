@@ -1,11 +1,15 @@
 .switch__ball {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  border: solid 1px black;
-  background-color: cornflowerblue;
   z-index: 1;
   top: 0;
-  left: 5px;
+  left: 3px;
   position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; /* to make it a circle */
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      #ffff00,
+      #774400
+    ); /* this is the radial gradient I was talking about */
 }
