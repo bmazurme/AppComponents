@@ -1,5 +1,6 @@
 @import url(./vendor/normalize.css);
 @import url(./components/blocks/title/title.css);
+@import url(./components/blocks/block/block.css);
 @import url(./components/blocks/switch/switch.css);
 @import url(./components/blocks/switch/_on/switch_on.css);
 @import url(./components/blocks/switch/__ball/switch__ball.css);
@@ -7,3 +8,8 @@
 @import url(./components/blocks/rating/rating.css);
 @import url(./components/blocks/rating/__star/rating__star.css);
 @import url(./components/blocks/rating/__star/_active/rating__star_active.css);
+@import url(./components/blocks/slider/slider.css);
+@import url(./components/blocks/accordion/accordion.css);
+@import url(./components/blocks/accordion/__title/accordion__title.css);
+@import url(./components/blocks/accordion/__content/accordion__content.css);
+@import url(./components/blocks/accordion/_opend/accordion_opend.css);

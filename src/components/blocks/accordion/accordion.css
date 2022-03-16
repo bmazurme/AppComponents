@@ -1,0 +1,7 @@
+.accordion {
+  background-color: blanchedalmond;
+  border: solid 1px rgb(223, 173, 9);
+  margin: 30px;
+  width: 300px;
+  min-height: 20px;
+}

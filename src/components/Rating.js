@@ -3,11 +3,11 @@ import Star from "./Star";
 
 function Rating() {
   const [stars, setStars] = React.useState([
-    {clicked: false, focus: false, active: false},
-    {clicked: false, focus: false, active: false},
-    {clicked: false, focus: false, active: false},
-    {clicked: false, focus: false, active: false},
-    {clicked: false, focus: false, active: false}
+    {clicked: false, active: false},
+    {clicked: false, active: false},
+    {clicked: false, active: false},
+    {clicked: false, active: false},
+    {clicked: false, active: false}
   ]);
 
   function handleClick(id) {
@@ -17,33 +17,16 @@ function Rating() {
         if (id >= index) {
           arr.push({
             clicked: true,
-            focus: star.focus,
             active: star.active
           });
         } else {
           arr.push({
             clicked: false,
-            focus: star.focus,
             active: star.active
           });
         }
       });
     setStars(arr);
-    //console.log(arr);
-  }
-
-  function handleUnFocus(id) {
-    const arr = [];
-    stars.map(
-      (star, index) => {
-        arr.push({
-          clicked: star.clicked,
-          focus: false,
-          active: star.clicked
-        });
-      });
-    setStars(arr);
-    console.log(arr);
   }
 
   function handleFocus(id) {
@@ -53,26 +36,33 @@ function Rating() {
         if (id >= index) {
           arr.push({
             clicked: star.clicked,
-            focus: true,
             active: true
           });
         } else {
           arr.push({
             clicked: star.clicked,
-            focus: false,
             active: false
           });
         }
       });
     setStars(arr);
-    console.log(arr);
+  }
+
+  function handleUnFocus() {
+    const arr = [];
+    stars.map(
+      (star) => {
+        arr.push({
+          clicked: star.clicked,
+          active: star.clicked
+        });
+      });
+    setStars(arr);
   }
 
   return(
     <div className="rating">
-
       {stars.map((star, index) => 
-
         <Star key={index} 
               id={index}
               active={star.active }
@@ -81,7 +71,6 @@ function Rating() {
               handleUnFocus={handleUnFocus}
         /> 
       )}
-
     </div>
   );
 }

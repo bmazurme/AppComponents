@@ -1,21 +1,26 @@
 import Switch from './Switch';
 import Rating from './Rating';
+import Slider from './Slider';
+import Accordion from './Accordion';
 
 function App() {
   return (
     <div className="App">
-      <h2 className='title'>Switch</h2>
+      <h1 className='title'>Components</h1>
+      <h2 className='title block'>Switch</h2>
       <Switch/>
 
-      <h2 className='title'>Rating</h2>
+      <h2 className='title block'>Rating</h2>
       <Rating/>
 
-      <h2 className='title'>Slider</h2>
+      <h2 className='title block'>Slider</h2>
+      <Slider/>
 
-      <h2 className='title'>Accordion</h2>
+      <h2 className='title block'>Accordion</h2>
+      <Accordion/>
       
-      <h2 className='title'>Tree-button</h2>
-      
+      <h2 className='title block'>Tree-button</h2>
+
     </div>
   );
 }
