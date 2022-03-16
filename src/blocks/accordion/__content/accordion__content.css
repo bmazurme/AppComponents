@@ -1,4 +1,6 @@
 .accordion__content {
-  border-top: solid 1px rgb(223, 173, 9); 
-
+  border-top: solid 1px #ccc;
+  display: flex;
+  padding: 10px;
+  align-items: center;
 }

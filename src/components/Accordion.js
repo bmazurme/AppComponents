@@ -10,12 +10,12 @@ function Accordion(props) {
   return(
     <div className={`accordion ${data && 'accordion_opend'}`} onClick={handleClick}>
       <div className="accordion__title">
-        {props.title}
+      {data ? 'Close' : 'Open'}
       </div>
       {data && 
       
         <div className="accordion__content">
-          {props.content}
+          Bla-bla-bla...
         </div>
       
       }

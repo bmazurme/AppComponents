@@ -13,3 +13,5 @@
 @import url(./blocks/accordion/__title/accordion__title.css);
 @import url(./blocks/accordion/__content/accordion__content.css);
 @import url(./blocks/accordion/_opend/accordion_opend.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__copyright/footer__copyright.css);
