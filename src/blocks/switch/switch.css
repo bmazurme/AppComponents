@@ -2,9 +2,8 @@
   margin: 25px;
   padding: 0;
   position: relative;
-  background-color: #ffff00;
-  /* background-color: rgb(255, 168, 153); */
-  border: solid 1px rgb(223, 173, 9);
+  background-color: #eee;
+  border: solid 1px #ccc;
   border-radius: 25px;
   width: 50px;
   height: 24px;
