@@ -1,13 +1,15 @@
-# Components
+# App
 
-## Description
+### Description
 ...
 
-## Stack
-### HTML, CSS, JS
+### Stack
+#### HTML, CSS, JS
 
-## Version
+### Version
 0.0.0.1
+
+# Components
 
 ### Switch
 ...
