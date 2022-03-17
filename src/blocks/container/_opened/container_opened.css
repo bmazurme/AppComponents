@@ -1,6 +1,6 @@
-/* .accordion_opend {
+.container_opened {
   background-color: #eee;
-  margin: 30px;
   width: 300px;
   min-height: 120px;
-} */
+  border-bottom: solid 1px #ccc;
+}

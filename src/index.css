@@ -9,9 +9,15 @@
 @import url(./blocks/rating/__star/rating__star.css);
 @import url(./blocks/rating/__star/_active/rating__star_active.css);
 @import url(./blocks/slider/slider.css);
-@import url(./blocks/accordion/accordion.css);
-@import url(./blocks/accordion/__title/accordion__title.css);
-@import url(./blocks/accordion/__content/accordion__content.css);
-@import url(./blocks/accordion/_opend/accordion_opend.css);
+
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
+@import url(./blocks/accordion/accordion.css);
+@import url(./blocks/accordion/__title/accordion__title.css);
+@import url(./blocks/accordion/__title/_opened/accordion__title_opened.css);
+@import url(./blocks/accordion/__content/accordion__content.css);
+@import url(./blocks/container/container.css);
+@import url(./blocks/container/_opened/container_opened.css);
+@import url(./blocks/container/__icon/container__icon.css);
+@import url(./blocks/container/__icon/_opened/container__icon_opened.css);
+@import url(./blocks/container/__title/container__title.css);

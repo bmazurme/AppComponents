@@ -1,26 +1,38 @@
 import React from "react";
+import Container from "./Container";
 
-function Accordion(props) {
-  const [data, setData] = React.useState(false);
+function Accordion() {
+  const [containers, setContainers] = React.useState([
+    {data: false, title: 'Title1', content: 'Content 1 - bla-bla-bla...'},
+    {data: false, title: 'Title2', content: 'Content 2 - bla-bla-bla...'},
+    {data: false, title: 'Title3', content: 'Content 3 - bla-bla-bla...'}
+  ]);
 
-  function handleClick() {
-    setData(!data);
+  function handleClick(id) {
+    const arr = [];
+    containers.map(
+      (container, index) => {
+        if (id === index) {
+          return arr.push({
+            data: !container.data,
+            title: container.title,
+            content: container.content
+          });
+        } else {
+          return arr.push({
+            data: false,
+            title: container.title,
+            content: container.content
+          });
+        }
+    });
+    setContainers(arr);
   }
 
   return(
-    <div className={`accordion ${data && 'accordion_opend'}`} onClick={handleClick}>
-      <div className="accordion__title">
-      {data ? 'Close' : 'Open'}
-      </div>
-      {data && 
-      
-        <div className="accordion__content">
-          Bla-bla-bla...
-        </div>
-      
-      }
-      
-
+    <div className="accordion">
+      {containers.map((container, index) => 
+      <Container id={index} key={index} container={container} handleClick={handleClick}/>)}
     </div>
   );
 }
