@@ -5,7 +5,6 @@ function Star(props) {
     <div onClick={()=>props.handleClick(props.id)}
          onPointerEnter={()=>{props.handleFocus(props.id)}}
          onPointerLeave={props.handleUnFocus}
-
          className={`rating__star ${ props.active && 'rating__star_active'}`}>
     </div>
   );

@@ -3,6 +3,7 @@ import Rating from './Rating';
 import Slider from './Slider';
 import Accordion from './Accordion';
 import Footer from './Footer';
+import TreeButton from './TreeButton';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Accordion/>
       
       <h2 className='title block'>Tree-button</h2>
+      <TreeButton/>
 
       <Footer/>
 

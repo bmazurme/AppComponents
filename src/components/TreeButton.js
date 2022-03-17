@@ -1,7 +1,26 @@
-function TreeButton () {
+import React from "react";
+import PopUpContainer from "./PopUpContaine";
+
+function TreeButton (props) {
+  const [open, setOpen] = React.useState(false);
+
+  function handleClick(evt) {
+    console.log(evt.target);
+    setOpen(!open);
+  }
+
   return (
-    <button >
-    </button>
+    <>
+      <button className="tree-button" 
+              type="button" 
+              onClick={handleClick}
+      >
+        <span className="tree-button__text">Material</span>
+        <span className="tree-button__tag">All</span> 
+        <div className={`tree-button__icon`}></div>
+      </button>
+      <PopUpContainer handleClick={handleClick} open={open}/>
+    </>
   );
 }
 

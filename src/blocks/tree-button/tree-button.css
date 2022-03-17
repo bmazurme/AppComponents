@@ -1,0 +1,13 @@
+.tree-button {
+  margin: 30px;
+  padding: 5px 10px;
+  height: 30px;
+  width: 110px;
+  font-size: 14px;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  background-color: #eee;
+  cursor: pointer;
+  display:flex;
+  flex-direction: row;
+}
