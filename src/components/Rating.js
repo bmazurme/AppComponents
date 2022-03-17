@@ -12,15 +12,19 @@ function Rating() {
 
   function handleClick(id) {
     const arr = [];
+    let i = 0;
+    stars.filter(item => {if (item.clicked) i++});
+    const val = (id-i >= -1) ? !stars[id].clicked : true;
+
     stars.map(
       (star, index) => {
         if (id >= index) {
-          arr.push({
-            clicked: true,
+          return arr.push({
+            clicked: val ,
             active: star.active
           });
         } else {
-          arr.push({
+          return arr.push({
             clicked: false,
             active: star.active
           });
@@ -34,12 +38,12 @@ function Rating() {
     stars.map(
       (star, index) => {
         if (id >= index) {
-          arr.push({
+          return arr.push({
             clicked: star.clicked,
             active: true
           });
         } else {
-          arr.push({
+          return arr.push({
             clicked: star.clicked,
             active: false
           });
@@ -52,7 +56,7 @@ function Rating() {
     const arr = [];
     stars.map(
       (star) => {
-        arr.push({
+        return arr.push({
           clicked: star.clicked,
           active: star.clicked
         });
