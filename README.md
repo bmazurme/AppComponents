@@ -12,7 +12,7 @@
 # Components
 
 ### Switch
-...
+The option that the switch controls, as well as the state it's in, should be made clear from the corresponding inline label.
 
 ### Rating
 ...
