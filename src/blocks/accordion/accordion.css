@@ -1,8 +1,8 @@
 .accordion {
   background-color: #eee;
-  border-top: solid 1px #ccc;
-  border-left: solid 1px #ccc;
-  border-right: solid 1px #ccc;
+  border: solid 1px #ccc;
+  /* border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc; */
   border-radius: 4px;
   margin: 30px;
   width: 300px;
