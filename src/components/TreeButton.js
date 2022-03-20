@@ -3,9 +3,14 @@ import PopUpContainer from "./PopUpContaine";
 
 function TreeButton (props) {
   const [open, setOpen] = React.useState(false);
+  const [filter, setFilter] = React.useState('All');
 
   function handleClick(evt) {
     setOpen(!open);
+  }
+
+  function checkFilter(flag) {
+    flag ? setFilter('X') : setFilter('All');
   }
 
   return (
@@ -15,10 +20,10 @@ function TreeButton (props) {
               onClick={handleClick}
       >
         <span className="tree-button__text">Material</span>
-        <span className="tree-button__tag">All</span> 
+        <span className="tree-button__tag">{filter}</span> 
         <div className={`tree-button__icon`}></div>
       </button>
-      <PopUpContainer handleClick={handleClick} open={open}/>
+      <PopUpContainer checkFilter={checkFilter} handleClick={handleClick} open={open}/>
     </>
   );
 }
