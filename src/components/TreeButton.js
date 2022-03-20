@@ -5,7 +5,6 @@ function TreeButton (props) {
   const [open, setOpen] = React.useState(false);
 
   function handleClick(evt) {
-    console.log(evt.target);
     setOpen(!open);
   }
 
