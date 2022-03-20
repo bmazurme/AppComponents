@@ -2,10 +2,10 @@
   display: flex;
   padding: 10px;
   align-items: center;
-  border-bottom: solid 1px #ccc;
   font-size: 16px;
+  border-top: 1px solid #ccc;
 }
 
-/* .accordion__title:last-child {
-  border-bottom: none;
-} */
+.accordion__title_first {
+  border-top:none;
+}

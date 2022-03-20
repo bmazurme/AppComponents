@@ -2,5 +2,9 @@
   background-color: #eee;
   width: 300px;
   min-height: 120px;
-  border-bottom: solid 1px #ccc;
+}
+
+.container_last {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
