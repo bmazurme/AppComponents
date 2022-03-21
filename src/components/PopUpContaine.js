@@ -2,9 +2,18 @@ import Tree from "./Tree";
 
 function PopUpContainer(props) {
   return(
-    <div className={`popup ${props.open && 'popup_opened'}`}>
+    <div className={`popup ${props.openPopup && 'popup_opened'}`}>
       <div className="popup__container">
-        <Tree checkFilter={props.checkFilter}/>
+
+        <Tree checkFilter={props.checkFilter} 
+              getCount={props.getCount}
+              handleOnChange={props.handleOnChange}
+              handleChange={props.handleChange}
+              handleChangeAll={props.handleChangeAll}
+              filters={props.filters}
+              checkedAll={props.checkedAll}
+        />
+
         <button type="button"
                 onClick={props.handleClick}
                 className="popup__button">Apply</button>

@@ -1,6 +1,7 @@
 .tree-button__icon {
   margin: 0 ;
-  padding: 8px 6px;
+  margin-left: 0;
+  padding: 8px 12px;
   background-image: url(../../../images/down_icon.svg);
   background-repeat: no-repeat;
   background-position: center;

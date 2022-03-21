@@ -13,14 +13,14 @@ function Rating() {
   function handleClick(id) {
     const arr = [];
     let i = 0;
-    stars.filter(item => {if (item.clicked) i++});
+    stars.forEach(item => {if (item.clicked) i++});
     const val = (id-i >= -1) ? !stars[id].clicked : true;
 
     stars.map(
       (star, index) => {
         if (id >= index) {
           return arr.push({
-            clicked: val ,
+            clicked: val,
             active: star.active
           });
         } else {

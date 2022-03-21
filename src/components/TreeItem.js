@@ -8,7 +8,7 @@ function TreeItem (props) {
       <div className="popup__tree">
         <div className="tree__group">
           <input className="tree__input" type="checkbox"
-            checked={props.all}
+            checked={props.checkedAll}
             onChange={props.handleChangeAll} 
             
             ></input>

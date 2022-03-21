@@ -10,7 +10,7 @@ function Switch() {
   return(
     <button className={`switch ${switcher && 'switch_on'}`} 
             onClick={handleClick} >
-      <div className= {`switch__ball ${switcher && 'switch__ball_on'}`}/>
+      <div className={`switch__ball ${switcher && 'switch__ball_on'}`}/>
     </button>
   );
 }
