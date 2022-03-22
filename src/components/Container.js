@@ -10,7 +10,6 @@ function Container(props) {
         <div className={`accordion__title 
           ${props.container.data && 'accordion__title_opened'} 
           ${props.first && 'accordion__title_first' }`
-          
           }>
 
         <div className={`container__icon  

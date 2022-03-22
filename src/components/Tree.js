@@ -2,7 +2,8 @@ import React from "react";
 import TreeItem from "./TreeItem";
 
 function Tree(props) {
-  return(<TreeItem filters={props.filters}
+  return(<TreeItem input={props.input}
+                   filters={props.filters}
                    checkedAll={props.checkedAll}
                    handleOnChange={props.handleOnChange}
                    handleChange={props.handleChange} 

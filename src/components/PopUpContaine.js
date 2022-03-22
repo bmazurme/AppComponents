@@ -12,6 +12,7 @@ function PopUpContainer(props) {
               handleChangeAll={props.handleChangeAll}
               filters={props.filters}
               checkedAll={props.checkedAll}
+              input={props.input}
         />
 
         <button type="button"

@@ -8,6 +8,7 @@ function TreeButton () {
   const [resetButton, setResetButton] = React.useState('All');
   const [filters, setFilters] = React.useState(data);
   const [checkedAll, setCheckedAll] = React.useState(false);
+  const [input, setInput] = React.useState('');
 
   function getCount() {
     let i = 0;
@@ -39,12 +40,13 @@ function TreeButton () {
     checkFilter();
     setFilters(data);
     setCheckedAll(false);
-    //console.log(checkedAll);
+    setInput('');
   }
 
   function handleOnChange(evt) {
     setCheckedAll(false);
     const key = evt.target.value;
+    setInput(key);
     const arr = [];
 
     if (key.length > 0) {
@@ -146,6 +148,7 @@ function TreeButton () {
                       handleChangeAll={handleChangeAll}
                       filters={filters}
                       checkedAll={checkedAll}
+                      input={input}
       />
     </>
   );

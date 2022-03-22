@@ -14,7 +14,7 @@ function Rating() {
     const arr = [];
     let i = 0;
     stars.forEach(item => {if (item.clicked) i++});
-    const val = (id-i >= -1) ? !stars[id].clicked : true;
+    const val = (id - i >= -1) ? !stars[id].clicked : true;
 
     stars.map(
       (star, index) => {

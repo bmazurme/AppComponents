@@ -3,8 +3,8 @@ import React from "react";
 function Slider() {
   const [position, setPosition] = React.useState(50);
 
-  function handleInputChange(e) {
-    let target = e.target;
+  function handleInputChange(evt) {
+    let target = evt.target;
     const min = target.min;
     const max = target.max;
     const val = target.value;
