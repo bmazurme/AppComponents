@@ -10,19 +10,19 @@ function TreeButton () {
   const [checkedAll, setCheckedAll] = React.useState(false);
   const [input, setInput] = React.useState('');
 
-  function getCount() {
+  const getCount = () => {
     let i = 0;
     filters.forEach(item => {
       i += item.children.length
     });
     return i;
-  }
+  };
 
-  function handleClick() {
+  const handleClick = () => {
     setOpenPopup(!openPopup);
-  }
+  };
 
-  function checkFilter() {
+  const checkFilter = () => {
     let flag = false;
     filters.forEach(item =>{
       if (item.include) {
@@ -34,16 +34,16 @@ function TreeButton () {
       }
     });
     !flag ? setResetButton('X') : setResetButton('All');
-  }
+  };
 
-  function handleReset() {
+  const handleReset = () => {
     checkFilter();
     setFilters(data);
     setCheckedAll(false);
     setInput('');
-  }
+  };
 
-  function handleOnChange(evt) {
+  const handleOnChange = (evt) => {
     setCheckedAll(false);
     const key = evt.target.value;
     setInput(key);
@@ -73,7 +73,7 @@ function TreeButton () {
     }
   }
 
-  function handleChangeAll() {
+  const handleChangeAll = () => {
     setCheckedAll(!checkedAll);
     const arr = [];
     filters.forEach(item => {
@@ -94,9 +94,9 @@ function TreeButton () {
     });
     setFilters(arr);
     checkFilter();
-  }
+  };
 
-  function handleChange(groupId, childId) {
+  const handleChange = (groupId, childId) => {
     const arr = [];
     filters.forEach(group => {
         if (groupId === group.groupId) {
@@ -131,24 +131,26 @@ function TreeButton () {
       })
     setFilters(arr);
     checkFilter();
-  }
+  };
 
   return (
     <>
-      <SeparateButton resetButton={resetButton} 
-                      handleReset={handleReset} 
-                      handleClick={handleClick} 
+      <SeparateButton
+        resetButton={resetButton} 
+        handleReset={handleReset} 
+        handleClick={handleClick} 
       />
-      <PopUpContainer checkFilter={checkFilter} 
-                      handleClick={handleClick} 
-                      openPopup={openPopup}
-                      getCount={getCount}
-                      handleOnChange={handleOnChange}
-                      handleChange={handleChange}
-                      handleChangeAll={handleChangeAll}
-                      filters={filters}
-                      checkedAll={checkedAll}
-                      input={input}
+      <PopUpContainer
+        checkFilter={checkFilter} 
+        handleClick={handleClick} 
+        openPopup={openPopup}
+        getCount={getCount}
+        handleOnChange={handleOnChange}
+        handleChange={handleChange}
+        handleChangeAll={handleChangeAll}
+        filters={filters}
+        checkedAll={checkedAll}
+        input={input}
       />
     </>
   );

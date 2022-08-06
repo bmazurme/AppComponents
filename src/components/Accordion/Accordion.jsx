@@ -1,5 +1,5 @@
-import React from "react";
-import Container from "./Container";
+import React from 'react';
+import Container from './Container';
 
 function Accordion() {
   const [containers, setContainers] = React.useState([
@@ -29,15 +29,16 @@ function Accordion() {
     setContainers(arr);
   }
 
-  return(
+  return (
     <div className="accordion">
       {containers.map((container, index) => 
-      <Container id={index} 
-                 key={index}
-                 container={container}
-                 last={(containers.length-1 === index)}
-                 first={index===0}
-                 handleClick={handleClick}/>)}
+      <Container
+        id={index} 
+        key={index}
+        container={container}
+        last={(containers.length - 1 === index)}
+        first={index === 0}
+        handleClick={handleClick}/>)}
     </div>
   );
 }

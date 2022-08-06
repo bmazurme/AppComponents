@@ -1,5 +1,5 @@
-import React from "react";
-import Star from "./Star";
+import React from 'react';
+import Star from './Star';
 
 function Rating() {
   const [stars, setStars] = React.useState([
@@ -10,7 +10,7 @@ function Rating() {
     {clicked: false, active: false}
   ]);
 
-  function handleClick(id) {
+  const handleClick = (id) => {
     const arr = [];
     let i = 0;
     stars.forEach(item => {if (item.clicked) i++});
@@ -31,9 +31,9 @@ function Rating() {
         }
       });
     setStars(arr);
-  }
+  };
 
-  function handleFocus(id) {
+  const handleFocus = (id) => {
     const arr = [];
     stars.map(
       (star, index) => {
@@ -50,9 +50,9 @@ function Rating() {
         }
       });
     setStars(arr);
-  }
+  };
 
-  function handleUnFocus() {
+  const handleUnFocus = () => {
     const arr = [];
     stars.map(
       (star) => {
@@ -62,17 +62,18 @@ function Rating() {
         });
       });
     setStars(arr);
-  }
+  };
 
-  return(
+  return (
     <div className="rating">
       {stars.map((star, index) => 
-        <Star key={index} 
-              id={index}
-              active={star.active }
-              handleClick={handleClick}
-              handleFocus={handleFocus}
-              handleUnFocus={handleUnFocus}
+        <Star
+          key={index} 
+          id={index}
+          active={star.active }
+          handleClick={handleClick}
+          handleFocus={handleFocus}
+          handleUnFocus={handleUnFocus}
         /> 
       )}
     </div>
