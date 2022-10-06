@@ -1,5 +1,5 @@
-function SeparateButton(props) {
-  const { handleClick, handleReset, resetButton } = props;
+function SeparateButton({ handleClick, handleReset, resetButton }) {
+
   return (
     <div className="container-button">
       <button
@@ -13,7 +13,7 @@ function SeparateButton(props) {
 
       <button
         onClick={handleReset}
-        disabled={resetButton === 'All' ? true : false}
+        disabled={resetButton === 'All'}
         className={`tree-button__reset ${resetButton === 'All' && 'tree-button_disabled'}`} 
         type="button"
       >

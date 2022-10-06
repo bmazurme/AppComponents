@@ -1,44 +1,29 @@
 import React from 'react';
+
 import Container from './Container';
+import mockData from './mockData';
 
 function Accordion() {
-  const [containers, setContainers] = React.useState([
-    {data: false, title: 'Title1', content: 'Content 1 - bla-bla-bla...'},
-    {data: false, title: 'Title2', content: 'Content 2 - bla-bla-bla...'},
-    {data: false, title: 'Title3', content: 'Content 3 - bla-bla-bla...'}
-  ]);
+  const [containers, setContainers] = React.useState(mockData);
 
-  function handleClick(id) {
-    const arr = [];
-    containers.map(
-      (container, index) => {
-        if (id === index) {
-          return arr.push({
-            data: !container.data,
-            title: container.title,
-            content: container.content
-          });
-        } else {
-          return arr.push({
-            data: false,
-            title: container.title,
-            content: container.content
-          });
-        }
-    });
+  const handlerClick = (id) => {
+    const arr = containers.map((box, index) => id === index ? { ...box, data: !box.data } : { ...box, data: false });
+
     setContainers(arr);
   }
 
   return (
     <div className="accordion">
       {containers.map((container, index) => 
-      <Container
-        id={index} 
-        key={index}
-        container={container}
-        last={(containers.length - 1 === index)}
-        first={index === 0}
-        handleClick={handleClick}/>)}
+        <Container
+          id={index} 
+          key={index}
+          container={container}
+          last={(containers.length - 1 === index)}
+          first={index === 0}
+          handleClick={handlerClick}
+        />
+      )}
     </div>
   );
 }

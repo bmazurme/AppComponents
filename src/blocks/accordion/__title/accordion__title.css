@@ -4,6 +4,7 @@
   align-items: center;
   font-size: 16px;
   border-top: 1px solid #ccc;
+  opacity: 0.6;
 }
 
 .accordion__title_first {

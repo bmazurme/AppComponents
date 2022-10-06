@@ -5,11 +5,11 @@ function Tree(props) {
   const {
     input,
     filters,
+    getCount,
     checkedAll,
     handleOnChange,
     handleChange,
     handleChangeAll,
-    getCount
   } = props;
   
   return (

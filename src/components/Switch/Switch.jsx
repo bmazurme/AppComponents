@@ -2,9 +2,7 @@ import React from 'react';
 
 function Switch() {
   const [switcher, setSwitcher] = React.useState(false);
-  const handleClick = () => {
-    setSwitcher(!switcher);
-  };
+  const handleClick = () => setSwitcher(!switcher);
 
   return (
     <button

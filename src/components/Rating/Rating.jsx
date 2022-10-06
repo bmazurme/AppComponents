@@ -1,66 +1,30 @@
 import React from 'react';
+
 import Star from './Star';
+import mockData from './mockData';
 
 function Rating() {
-  const [stars, setStars] = React.useState([
-    {clicked: false, active: false},
-    {clicked: false, active: false},
-    {clicked: false, active: false},
-    {clicked: false, active: false},
-    {clicked: false, active: false}
-  ]);
+  const [stars, setStars] = React.useState(mockData);
 
   const handleClick = (id) => {
-    const arr = [];
-    let i = 0;
-    stars.forEach(item => {if (item.clicked) i++});
+    const i = stars.reduce((count, item) => item.clicked ? count+=1 : count, 0);
     const val = (id - i >= -1) ? !stars[id].clicked : true;
+    const arr = stars.map(({ active }, index) =>
+      id >= index ? { clicked: val, active } : { clicked: false, active });
 
-    stars.map(
-      (star, index) => {
-        if (id >= index) {
-          return arr.push({
-            clicked: val,
-            active: star.active
-          });
-        } else {
-          return arr.push({
-            clicked: false,
-            active: star.active
-          });
-        }
-      });
     setStars(arr);
   };
 
   const handleFocus = (id) => {
-    const arr = [];
-    stars.map(
-      (star, index) => {
-        if (id >= index) {
-          return arr.push({
-            clicked: star.clicked,
-            active: true
-          });
-        } else {
-          return arr.push({
-            clicked: star.clicked,
-            active: false
-          });
-        }
-      });
+    const arr = stars.map(({ clicked }, index) => 
+      id >= index ? { clicked, active: true } : { clicked, active: false });
+
     setStars(arr);
   };
 
   const handleUnFocus = () => {
-    const arr = [];
-    stars.map(
-      (star) => {
-        return arr.push({
-          clicked: star.clicked,
-          active: star.clicked
-        });
-      });
+    const arr = stars.map(({clicked }) => ({ clicked, active: clicked }));
+
     setStars(arr);
   };
 

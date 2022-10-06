@@ -4,6 +4,7 @@ import Slider from '../Slider/Slider';
 import Accordion from '../Accordion/Accordion';
 import Footer from '../Footer';
 import TreeButton from '../Tree/TreeButton';
+import Navigator from '../Navigator/Navigator';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
       <Accordion />
       <h2 className="title block">Tree-button</h2>
       <TreeButton />
+      <h2 className="title block">Navigator</h2>
+      <Navigator logined={true} userName='anykey'/>
       <Footer />
     </div>
   );

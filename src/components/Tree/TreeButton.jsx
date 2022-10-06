@@ -10,29 +10,22 @@ function TreeButton () {
   const [checkedAll, setCheckedAll] = React.useState(false);
   const [input, setInput] = React.useState('');
 
-  const getCount = () => {
-    let i = 0;
-    filters.forEach(item => {
-      i += item.children.length
-    });
-    return i;
-  };
-
-  const handleClick = () => {
-    setOpenPopup(!openPopup);
-  };
+  const getCount = () => filters.reduce((count, item) => count += item.children.length, 0);
+  const handleClick = () => setOpenPopup(!openPopup);
 
   const checkFilter = () => {
     let flag = false;
-    filters.forEach(item =>{
+
+    filters.forEach((item) =>{
       if (item.include) {
         return flag = true;
       } else {
-        item.children.forEach(child => {
+        item.children.forEach((child) => {
           if (child.include) return flag = true;
         });
       }
     });
+
     !flag ? setResetButton('X') : setResetButton('All');
   };
 
@@ -76,59 +69,45 @@ function TreeButton () {
   const handleChangeAll = () => {
     setCheckedAll(!checkedAll);
     const arr = [];
-    filters.forEach(item => {
-      const row = {
-        groupId: item.groupId,
-        group: item.group,
-        include: !checkedAll,
-        children: []
-      };
-      item.children.forEach(child => {
-        row.children.push({
-          id: child.id,
-          name: child.name,
-          include: !checkedAll
-        });
-      });
+
+    filters.forEach((item) => {
+      const row = { ...item, include: !checkedAll, children: [] };
+
+      item.children.forEach((child) => row.children.push({ ...child, include: !checkedAll }));
+
       arr.push(row);
     });
+
     setFilters(arr);
     checkFilter();
   };
 
   const handleChange = (groupId, childId) => {
     const arr = [];
-    filters.forEach(group => {
+
+    filters.forEach((group) => {
         if (groupId === group.groupId) {
-          const row = {
-            groupId: group.groupId,
-            group: group.group,
+          const row = { ...group,
             include: (childId === null) ? !group.include : group.include,
             children: []
           };
 
           if (childId === null) {
-            group.children.forEach(child => {
-              row.children.push({
-                id: child.id,
-                name: child.name,
-                include: !group.include
-              });
+            group.children.forEach((child) => {
+              row.children.push({ ...child, include: !group.include });
             });
           } else {
-            group.children.forEach(child => {
-              row.children.push({
-                id: child.id,
-                name: child.name,
-                include: (child.id === childId) ? !child.include : child.include
-              });
+            group.children.forEach((child) => {
+              row.children.push({ ...child, include: child.id === childId ? !child.include : child.include });
             });
           }
+
           arr.push(row);
         } else if (groupId !== group.groupId) {
           arr.push(group);
         }
-      })
+      });
+
     setFilters(arr);
     checkFilter();
   };

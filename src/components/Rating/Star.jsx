@@ -3,10 +3,10 @@ import React from 'react';
 function Star(props) {
   const {
     id,
+    active,
     handleClick,
     handleFocus,
     handleUnFocus,
-    active,
   } = props;
   
   return (

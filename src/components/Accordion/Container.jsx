@@ -1,10 +1,10 @@
 function Container(props) {
   const {
     id,
-    container,
     last,
-    handleClick,
     first,
+    container,
+    handleClick,
   } = props;
 
   return (
@@ -17,25 +17,18 @@ function Container(props) {
       onClick={() => handleClick(id)}
     >
 
-    <div className={`accordion__title 
+      <div
+        className={`accordion__title 
         ${container.data && 'accordion__title_opened'} 
-        ${first && 'accordion__title_first' }`
-      }
-    >
+        ${first && 'accordion__title_first' }`}
+      >
 
-    <div className={`container__icon  
-      ${container.data && 'container__icon_opened'}`}></div>
-      <p className="container__title">
-        {container.title}
-      </p>
-    </div>
-
-    {container.data && 
-      <div className="accordion__content">
-        {container.content}
+        <span className={`container__icon ${container.data && 'container__icon_opened'}`} />
+        <h6 className="container__title">{container.title}</h6>
       </div>
-    }
-  </div>
+
+      {container.data && <div className="accordion__content">{container.content}</div>}
+    </div>
   );
 }
 

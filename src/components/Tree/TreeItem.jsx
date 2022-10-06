@@ -1,12 +1,12 @@
 function TreeItem (props) {
   const {
     input,
-    handleOnChange,
-    checkedAll,
-    handleChangeAll,
-    getCount,
     filters,
+    getCount,
+    checkedAll,
     handleChange,
+    handleOnChange,
+    handleChangeAll,
   } = props;
 
   return (

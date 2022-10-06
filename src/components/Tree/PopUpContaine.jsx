@@ -2,16 +2,16 @@ import Tree from './Tree';
 
 function PopUpContainer(props) {
   const {
-    checkFilter,
-    getCount,
-    handleOnChange,
-    handleChange,
-    handleChangeAll,
-    filters,
-    checkedAll,
     input,
+    filters,
+    getCount,
     openPopup,
+    checkedAll,
     handleClick,
+    checkFilter,
+    handleChange,
+    handleOnChange,
+    handleChangeAll,
   } = props;
 
   return (
